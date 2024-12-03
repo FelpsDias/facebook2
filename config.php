@@ -1,9 +1,9 @@
 <?php 
 
-$dbHost = 'LocalHost';
+$dbHost = 'junction.proxy.rlwy.net';
 $dbUsername = 'root';
-$dbPassword = '';
-$dbName = 'formsFacebook';
+$dbPassword = 'VPRPnXtxIuPJQdsjUlkbOmZDJmuSlvLl';
+$dbName = 'railway';
 
 $conexao = new mysqli($dbHost,$dbUsername,$dbPassword,$dbName);
 
