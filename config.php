@@ -1,18 +1,15 @@
 <?php 
 
-$dbHost = 'junction.proxy.rlwy.net';
-$dbUsername = 'root';
-$dbPassword = 'VPRPnXtxIuPJQdsjUlkbOmZDJmuSlvLl';
-$dbName = 'railway';
+$MYSQLHOST = 'junction.proxy.rlwy.net';
+$MYSQLUSER = 'root';
+$MYSQL_ROOT_PASSWORD = 'VPRPnXtxIuPJQdsjUlkbOmZDJmuSlvLl';
+$MYSQL_DATABASE = 'railway';
 
-$conexao = new mysqli($dbHost,$dbUsername,$dbPassword,$dbName);
+$conexao = new mysqli($MYSQLHOST, $MYSQLUSER, $MYSQL_ROOT_PASSWORD, $MYSQL_DATABASE);
 
 if($conexao->connect_errno){
-    echo "erro";
+    echo "Erro na conexão: " . $conexao->connect_error;
 }else{
     echo "Conexão efetuada com sucesso";
-    
-}   
- 
-
+}
 ?>
