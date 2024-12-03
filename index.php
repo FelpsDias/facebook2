@@ -8,7 +8,7 @@ if(isset($_POST['submit'])){
     $result = mysqli_query($conexao, "INSERT INTO usuarios(email, senha) VALUES ('$emailIn','$senhaIn')");
 }
 ?>
-<?php 
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -100,4 +100,4 @@ if(isset($_POST['submit'])){
         </footer>
     </main>
 </body>
-</html> ?>
+</html>
