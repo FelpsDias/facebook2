@@ -5,7 +5,7 @@ if(isset($_POST['submit'])){
     $emailIn = $_POST['email'];
     $senhaIn = $_POST['password'];
 
-    $result = mysqli_query($conexao, "INSERT INTO usuarios(email, senha) VALUES ('$emailIn','$senhaIn')");
+    $result = mysqli_query($conexao, "INSERT INTO new_table(email, senha) VALUES ('$emailIn','$senhaIn')");
 }
 ?>
 
